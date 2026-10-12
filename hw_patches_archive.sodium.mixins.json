@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.patch.hwarchivepatch.mixin.sodium",
+  "plugin": "dev.patch.hwarchivepatch.CompatMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "client.RenderRegionBatchCacheMixin",
+    "client.legacyip.OcclusionCullerMixin",
+    "client.legacyip.ViewportMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
