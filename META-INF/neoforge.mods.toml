@@ -1,0 +1,131 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT"
+
+[[mods]]
+modId="hw_patches_archive"
+version="1.16.10"
+displayName="[HW] Patches Archive"
+description='''
+Compatibility patch for Sable (Create Aeronautics), Immersive Portals, SecurityCraft, Sodium, Legendary Survival Overhaul, Vampirism, Enhanced AI and Voxy.
+Every mod is optional: fixes are switched off automatically when a mod they need is not installed.
+- Nether portals stay attached to Sable physics objects, can be lit on them, and link using the object's real position. (Sable + Immersive Portals)
+- Blocks on physics objects can be broken next to portals. (Sable + Immersive Portals)
+- SecurityCraft cameras work with Immersive Portals' chunk sending. (SecurityCraft + Immersive Portals)
+- Chunks no longer flicker when a portal is seen through another portal. (Sodium + Immersive Portals)
+- Physics objects shield from sun and rain: undead and vampires do not burn under them, rain does not wet through them. (Sable, + LSO)
+- Heat and cold sources on physics objects affect body temperature. (Sable + LSO)
+- Freezing vampires no longer get a hunger bar. (LSO + Vampirism)
+- Zombies, skeletons and creepers ignore vampires again with Enhanced AI targeting. (Vampirism + Enhanced AI)
+- Looking into a portal no longer replaces the whole screen with the other side (Voxy turned the stencil test off). Voxy LODs are drawn only in the main view (not inside portals, not over chunks seen through them), its GPU memory is used only for the player's dimension and moves with the player through portals; IP's "Voxy is incompatible" warning is removed. (Voxy + Immersive Portals)
+- Voice no longer stutters while a portal into another dimension is visible, and players can talk through portals (also into other dimensions); the voice comes from the portal's direction. (Simple Voice Chat + Immersive Portals)
+- IP's outdated Collective warning is removed. (Collective + Immersive Portals)
+- Contraptions in other dimensions (seen through portals) get their spawn data and are visible; their Flywheel visuals keep ticking. (Create + Immersive Portals)
+- No crash when a contraption has no data on the client. (Create Big Cannons + Create)
+'''
+
+# Every mixin is gated by CompatMixinPlugin on the mods it patches
+[[mixins]]
+config="hw_patches_archive.mixins.json"
+
+[[mixins]]
+config="hw_patches_archive.sodium.mixins.json"
+
+[[dependencies.hw_patches_archive]]
+    modId="neoforge"
+    type="required"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="NONE"
+    side="BOTH"
+
+# Optional: when installed, the version must match; when missing, its fixes are skipped
+[[dependencies.hw_patches_archive]]
+    modId="securitycraft"
+    type="optional"
+    versionRange="[1.10.2,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="immersive_portals_core"
+    type="optional"
+    versionRange="[6.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="sodium"
+    type="optional"
+    versionRange="[0.8,)"
+    ordering="AFTER"
+    side="CLIENT"
+
+[[dependencies.hw_patches_archive]]
+    modId="sable"
+    type="optional"
+    versionRange="[2.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="legendarysurvivaloverhaul"
+    type="optional"
+    versionRange="[2.4,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="vampirism"
+    type="optional"
+    versionRange="[1.10,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="enhancedai"
+    type="optional"
+    versionRange="[4.2,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="voxy"
+    type="optional"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="collective"
+    type="optional"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="voicechat"
+    type="optional"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="create"
+    type="optional"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="createbigcannons"
+    type="optional"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="flywheel"
+    type="optional"
+    ordering="AFTER"
+    side="BOTH"

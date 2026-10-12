@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "immersive_portals:loading_indicator", "required": false }
+  ]
+}
