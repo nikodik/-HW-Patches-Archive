@@ -1,2 +1,4 @@
 dev.patch.hwarchivepatch.SecurityCraftAdjuster
 dev.patch.hwarchivepatch.LegacyImmPtlAdjuster
+dev.patch.hwarchivepatch.VoxySsrdAdjuster
+dev.patch.hwarchivepatch.VoxyRoxyVssAdjuster

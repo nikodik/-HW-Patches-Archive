@@ -4,7 +4,7 @@ license="MIT"
 
 [[mods]]
 modId="hw_patches_archive"
-version="1.16.10"
+version="1.17.10"
 displayName="[HW] Patches Archive"
 description='''
 Compatibility patch for Sable (Create Aeronautics), Immersive Portals, SecurityCraft, Sodium, Legendary Survival Overhaul, Vampirism, Enhanced AI and Voxy.
@@ -17,7 +17,7 @@ Every mod is optional: fixes are switched off automatically when a mod they need
 - Heat and cold sources on physics objects affect body temperature. (Sable + LSO)
 - Freezing vampires no longer get a hunger bar. (LSO + Vampirism)
 - Zombies, skeletons and creepers ignore vampires again with Enhanced AI targeting. (Vampirism + Enhanced AI)
-- Looking into a portal no longer replaces the whole screen with the other side (Voxy turned the stencil test off). Voxy LODs are drawn only in the main view (not inside portals, not over chunks seen through them), its GPU memory is used only for the player's dimension and moves with the player through portals; IP's "Voxy is incompatible" warning is removed. (Voxy + Immersive Portals)
+- Looking into a portal no longer replaces the whole screen with the other side (Voxy turned the stencil test off). Voxy LODs are also drawn behind portals (into the same or another dimension), clipped to the portal; Voxy's GPU memory is used for the player's dimension and, while seen, the dimensions behind portals; IP's "Voxy is incompatible" warning is removed. (Voxy + Immersive Portals)
 - Voice no longer stutters while a portal into another dimension is visible, and players can talk through portals (also into other dimensions); the voice comes from the portal's direction. (Simple Voice Chat + Immersive Portals)
 - IP's outdated Collective warning is removed. (Collective + Immersive Portals)
 - Contraptions in other dimensions (seen through portals) get their spawn data and are visible; their Flywheel visuals keep ticking. (Create + Immersive Portals)
@@ -27,6 +27,12 @@ Every mod is optional: fixes are switched off automatically when a mod they need
 # Every mixin is gated by CompatMixinPlugin on the mods it patches
 [[mixins]]
 config="hw_patches_archive.mixins.json"
+
+[[mixins]]
+config="hw_patches_archive.cortexvoxy.mixins.json"
+
+[[mixins]]
+config="hw_patches_archive.cortexvoxy.v0215.mixins.json"
 
 [[mixins]]
 config="hw_patches_archive.sodium.mixins.json"
@@ -96,6 +102,25 @@ config="hw_patches_archive.sodium.mixins.json"
 
 [[dependencies.hw_patches_archive]]
     modId="voxy"
+    type="optional"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.hw_patches_archive]]
+    modId="ssrd"
+    type="optional"
+    ordering="AFTER"
+    side="BOTH"
+
+# Loaders/companions of Voxy: only used for ordering, every fix keys off ModPresence.voxyVariant()
+[[dependencies.hw_patches_archive]]
+    modId="roxy"
+    type="optional"
+    ordering="AFTER"
+    side="CLIENT"
+
+[[dependencies.hw_patches_archive]]
+    modId="vss"
     type="optional"
     ordering="AFTER"
     side="BOTH"

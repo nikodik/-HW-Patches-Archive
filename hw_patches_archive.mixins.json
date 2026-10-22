@@ -40,6 +40,7 @@
     "createbigcannons.CBCModifiedContraptionRegistryMixin",
     "voicechat.ServerProximityPortalMixin",
     "voxy.ModIncompatInfoMixin",
+    "voxy.ssrd.ChunkMapTrackedEntityVoxySsrdMixin",
     "world.LevelSubLevelCoverMixin"
   ],
   "client": [
@@ -56,11 +57,16 @@
     "legacyip.client.TransformationManagerAccessor",
     "sable.client.VanillaChunkedSubLevelRenderDataMixin",
     "voicechat.client.AudioChannelMixin",
-    "voxy.client.ChunkBoundRendererMixin",
-    "voxy.client.FogRendererVoxyMixin",
+    "voxy.client.AbstractRenderPipelinePortalMixin",
+    "voxy.client.GameRendererVoxyPortalMixin",
     "voxy.client.LevelRendererVoxyMixin",
     "voxy.client.RendererUsingStencilVoxyMixin",
-    "voxy.client.VoxyRenderSystemMixin"
+    "voxy.client.ViewportSelectorPortalMixin",
+    "voxy.client.VoxyRenderSystemPortalMixin",
+    "voxy.roxyvss.client.RenderGenerationServiceRoxyVssMixin",
+    "voxy.neo.client.ChunkBoundRendererMixin",
+    "voxy.neo.client.FogRendererVoxyMixin",
+    "voxy.neo.client.VoxyRenderSystemMixin"
   ],
   "injectors": {
     "defaultRequire": 1
