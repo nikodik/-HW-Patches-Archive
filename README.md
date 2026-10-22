@@ -2,7 +2,7 @@
 **About mod:**
 The patch archive is a mod created as part of the HM program within Harmony Workshop; its purpose is to implement compatibility fixes for mods that previously could not work together or worked but not fully.
 
-(relevant for version 1.16.10)**Patches:**
+(relevant for version 1.17.10)**Patches:**
 **Sable** - A patch for correct rendering and creation of portals in the nether and the undead do not burn in the sun when they are beneath physical objects.
 
 **SecurityCraft** - compatibility patch for immersive portals.
