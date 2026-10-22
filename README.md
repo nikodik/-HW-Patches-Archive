@@ -17,7 +17,7 @@ The patch archive is a mod created as part of the HM program within Harmony Work
 
 **Vampirism** - Vampires do not take damage from the sun while under physical blocks.
 
-**Voxy** - At the moment, it doesnt quite work as intended, but at least all possible causes of the game crashing have been eliminated (the ones I managed to find, of course).
+**Voxy/Roxy** - It works through portals created using the immersive portals mod, as well as through the same portals, but with physics from sable.
 
 **Simple Voice Chat** - Now the sound should be transmitted through.
 
