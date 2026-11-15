@@ -24,6 +24,8 @@ The patch archive is a mod created as part of the HM program within Harmony Work
 **Alex Mob's** - When launching three mods(sable, immersive portals and alex mobs), an error occurred that caused the game to crash; it has now been fixed.
 Other patches will be added as needed.
 
+**Diorama** - Now, the chunks loaded by this mod will be sent to the voxy mod in the form of LOD for preloading.
+
 
 
 P.s: You don’t have to install all the mods; I did this based on the assumption that not everything will be installed.
