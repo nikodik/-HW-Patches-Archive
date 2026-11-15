@@ -4,7 +4,7 @@ license="MIT"
 
 [[mods]]
 modId="hw_patches_archive"
-version="1.17.10"
+version="1.18.11"
 displayName="[HW] Patches Archive"
 description='''
 Compatibility patch for Sable (Create Aeronautics), Immersive Portals, SecurityCraft, Sodium, Legendary Survival Overhaul, Vampirism, Enhanced AI and Voxy.

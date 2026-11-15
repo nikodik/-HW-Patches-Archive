@@ -46,6 +46,7 @@
   "client": [
     "create.client.FluidPropagatorMeshingMixin",
     "create.client.VisualizationManagerImplMixin",
+    "diorama.MapLevelVoxyMixin",
     "immptl.client.BlockManipulationClientMixin",
     "immptl.client.SableCameraPortalMixin",
     "ipspawn.client.ClientPayloadHandlerMixin",
